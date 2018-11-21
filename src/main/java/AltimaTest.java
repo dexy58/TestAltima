@@ -8,16 +8,15 @@ import java.util.Map;
 
 public class AltimaTest {
     public static void main(String[] args) {
-        Map<String, Integer> familyTree = new HashMap<>();
+        Map<String, String> familyTree = new HashMap<>();
         try {
             FileInputStream fstream = new FileInputStream("C:\\ChildParent.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             String strLine;
+            String[] namesList = new String[2];
             while((strLine=br.readLine()) != null) {
-                String[] namesList = strLine.split(" ");
-                for(String name : namesList){
-                    System.out.println(name);
-                }
+                namesList = strLine.split(" ");
+                familyTree.put(namesList[1], namesList[0]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
