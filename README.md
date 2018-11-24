@@ -3,10 +3,15 @@ Information about application
 You should have file ChildParent.txt in you C:\ drive, or you can change the path of the file in the code.
 Input:
 Adam Ivan
+
 Marko Stjepan
+
 Stjepan Adam
+
 Robert Stjepan
+
 Fran Ivan
+
 Leopold Luka
 
 Desired output:
