@@ -39,15 +39,19 @@ public class AltimaTest {
                         firstParent = true;
                     }
                 }
+                //Check if he/she is a first parent
                 if(firstParent == false && parentStarter.contains(parentNames.get(i)) == false){
+                    //Don't write first parent twice
                     parentStarter.add(parentNames.get(i));
                     System.out.println(parentNames.get(i));
                     for(int j=0;j<parentNames.size();j++){
+                        //Check if that parent has a child and write it
                         if(parentNames.get(j).equals(parentNames.get(i))){
                             System.out.println("\t" + childNames.get(j));
                             counter++;
                             childParent.add(childNames.get(j));
                         }
+                        //A child is also a parent, check if that child/parent also has a child
                         while(counter > 1){
                             childParentFlag = false;
                             for(int k=0; k<parentNames.size();k++){
@@ -62,6 +66,7 @@ public class AltimaTest {
                                     break;
                                 }
                             }
+                            //This is the last child, or in other words, he/she is not a parent
                             if(childParentFlag == false){
                                 counter--;
                                 finalChild.add(childParent.get(childParent.size()-1));

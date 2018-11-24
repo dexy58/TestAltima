@@ -36,6 +36,7 @@ public class FinalChildTest {
                         counter++;
                     }
                 }
+                //If all parent names don't match child names, he isn't a parent
                 if(counter == childNames.size()){
                     finalChild = true;
                 }
