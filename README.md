@@ -1,7 +1,13 @@
 Information about application
 
+
+
 You should have file ChildParent.txt in you C:\ drive, or you can change the path of the file in the code.
+
+
+
 Input:
+
 Adam Ivan
 
 Marko Stjepan
@@ -14,7 +20,27 @@ Fran Ivan
 
 Leopold Luka
 
+
+
 Desired output:
+
+Ivan
+
+   Adam
+   
+     Stjepan
+     
+       Marko
+       
+       Robert
+       
+     Fran
+     
+Luka
+
+   Leopold
+   
+
 
 
 How to run maven project from terminal:
