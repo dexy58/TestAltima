@@ -1,14 +1,19 @@
 import org.junit.jupiter.api.Test;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestName {
+/**
+ *
+ * @author Ivan Kralj <kraljivan488@gmail.com>
+ */
+
+public class FinalChildTest {
     @Test
-    public void checkFirstParent() throws Exception{
+    public void checkFinalChild(){
         List<String> parentNames = new ArrayList<>();
         List<String> childNames = new ArrayList<>();
         try {
@@ -21,21 +26,26 @@ public class TestName {
                 childNames.add(namesList[0]);
                 parentNames.add(namesList[1]);
             }
-            boolean firstParent = false;
-            for(int i=0;i<parentNames.size();i++){
-                firstParent = false;
-                for(int j=0;j<childNames.size();j++){
-                    if(parentNames.get(i).equals(childNames.get(j))){
-                        firstParent = true;
+            assertFalse(childNames.isEmpty());
+            assertFalse(parentNames.isEmpty());
+            boolean finalChild = false;
+            int counter = 0;
+            for(int i=0;i<childNames.size();i++){
+                for(int j=0;j<parentNames.size();j++){
+                    if(childNames.get(i).equals(parentNames.get(j)) == false){
+                        counter++;
                     }
                 }
+                if(counter == childNames.size()){
+                    finalChild = true;
+                }
+                counter = 0;
             }
-            assertTrue(firstParent);
+            assertTrue(finalChild);
         }catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e){
             e.printStackTrace();
         }
-
     }
 }
