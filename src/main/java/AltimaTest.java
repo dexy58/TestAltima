@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author Ivan Kralj <kraljivan488@gmail.com>
+ */
+
 public class AltimaTest {
     public static void main(String[] args) {
         List<String> parentNames = new ArrayList<>();
