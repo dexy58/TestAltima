@@ -48,10 +48,13 @@ public class AltimaTest {
                         //Check if that parent has a child and write it
                         if(parentNames.get(j).equals(parentNames.get(i))){
                             System.out.println("\t" + childNames.get(j));
+                            if(parentStarter.contains(childNames.get(j))){
+                                throw new Exception("Cyclic relationship is not valid!");
+                            }
                             counter++;
                             childParent.add(childNames.get(j));
                         }
-                        //A child is also a parent, check if that child/parent also has a child
+                        //Child is also a parent, check if that child also has a child
                         while(counter > 1){
                             childParentFlag = false;
                             for(int k=0; k<parentNames.size();k++){
@@ -60,6 +63,9 @@ public class AltimaTest {
                                         System.out.print("\t");
                                     }
                                     System.out.println(childNames.get(k));
+                                    if(parentStarter.contains(childNames.get(k))){
+                                        throw new Exception("Cyclic relationship is not valid!");
+                                    }
                                     childParent.add(childNames.get(k));
                                     childParentFlag = true;
                                     counter++;
@@ -81,6 +87,8 @@ public class AltimaTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e){
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
