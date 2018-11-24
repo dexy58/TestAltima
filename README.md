@@ -14,32 +14,29 @@ Leopold Luka
 ```
 
 ## Desired output:
-
+```
 Ivan
-
    Adam
-   
-     Stjepan
-     
-       Marko
-       
-       Robert
-       
-     Fran
-     
+      Stjepan
+         Marko 
+         Robert
+      Fran
 Luka
-
    Leopold
-   
+ ```  
 
 ## How to run maven project from terminal:
 Once you pull the project, position yourself where pom.xml file is (in my case C:\Users\Kralj\IdeaProjects\TestAltima) and type:
+```
 mvn exec:java
+```
 
-this will start the application and if everything is configured how it should ne, it should output correctly.
+this will start the application and if everything is configured how it should be, it should output correctly.
 
 ## How to run tests from terminal:
 Same with maven project, position yourself to where pom.xml file is and type:
+```
 mvn test
+```
 
 this will start all test files in \test directory.
