@@ -10,14 +10,7 @@ Fran Ivan
 Leopold Luka
 
 Desired output:
-Ivan
-   Adam
-      Stjepan
-          Marko
-          Robert
-      Fran
-Luka
-    Leopold
+
 
 How to run maven project from terminal:
 Once you pull the project, position yourself where pom.xml file is (in my case C:\Users\Kralj\IdeaProjects\TestAltima) and type:
