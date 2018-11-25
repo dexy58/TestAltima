@@ -2,6 +2,11 @@
 
 You should have file ChildParent.txt in you C:\ drive, or you can change the path of the file in the code.
 
+The format of the file is
+```
+<child name> <parent name>
+```
+
 
 ## Input:
 ```
